@@ -17,7 +17,9 @@ list_of_websites_to_block = ['https://www.youtube.com/']
 ############------------ FUNCTION(S) ------------############
 def block_websites_from_list():
     while True:
-        if dt(dt.now().year, dt.now().month, dt.now().day,8) < dt.now():
+  
+        # time of your work
+        if dt.now() != 16:
             print("Working hours")
             with open(hosts_path, 'r+') as file:
                 content = file.read()
@@ -25,6 +27,7 @@ def block_websites_from_list():
                     if website in content:
                         pass
                     else:
+                        # mapping hostnames to your localhost IP address
                         file.write(redirect + " " + website + "\n")
         else:
             with open(hosts_path, 'r+') as file:
@@ -34,9 +37,10 @@ def block_websites_from_list():
                     if not any(website in line for website in list_of_websites_to_block):
                         file.write(line)
     
+                # removing hostnmes from host file
                 file.truncate()
     
-            print("Personal time")
+            print("Fun hours")
         time.sleep(5)
 
 ############------------ DRIVER CODE ------------############
