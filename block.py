@@ -11,7 +11,7 @@ hosts_path = '/etc/hosts'
 redirect = '127.0.0.1'
 
 ### websites to block
-list_of_websites_to_block = ['https://www.youtube.com/']
+list_of_websites_to_block = ["www.youtube.com","youtube.com"]
 
 
 ############------------ FUNCTION(S) ------------############
@@ -19,7 +19,7 @@ def block_websites_from_list():
     while True:
   
         # time of your work
-        if dt.now() != 16:
+        if dt(dt.now().year, dt.now().month, dt.now().day,8) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day,20):
             print("Working hours")
             with open(hosts_path, 'r+') as file:
                 content = file.read()
