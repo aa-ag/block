@@ -1,7 +1,6 @@
 ############------------ IMPORTS ------------############
 import time
 from datetime import datetime as dt
-import os
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############

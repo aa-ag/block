@@ -149,6 +149,10 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
+# hosts
+hosts_copy.txt
+hosts_copy
+
 # mkdocs documentation
 /site
 
