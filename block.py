@@ -4,13 +4,13 @@ from datetime import datetime
 
 ############------------ GLOBAL VARIABLE(S) ------------############
 ### host
-host_path = ''
+host_path = '/etc/hosts'
 
 ### local host's IP
-redirect = ''
+redirect = '127.0.0.1'
 
 ### websites to block
-list_of_websites_to_block = list()
+list_of_websites_to_block = ['www.youtube.com']
 
 
 ############------------ FUNCTION(S) ------------############
